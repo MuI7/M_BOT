@@ -1,10 +1,12 @@
 import discord
 import asyncio
 import random
+import os
 
 client = discord.Client()
 
-token = "ODEyODMxMDI2NzQ5Mzc0NTI1.YDGd4g.VgoGAvHopqPaviwFuan2tsn-fLs"
+access_token = os.environ["BOT_TOKEN"]
+token = access_token
 
 @client.event
 async def on_ready():
@@ -81,5 +83,3 @@ async def on_message(message):
 client.run(token)
 
 
-
-#무냥봇 코드 참고 유튜브 링크:  https://www.youtube.com/watch?v=K-5erEF4VgY&list=PL26NHpcPSX91gLOXSL4KRsuHGI4jt1Uay&index=5
